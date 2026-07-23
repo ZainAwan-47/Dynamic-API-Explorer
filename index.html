@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic API Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><strong>Dynamic API Explorer</strong></h1>
+        <p><bold>Search and explore characters from a public REST API.</bold></p>
+    </header>
+
+    <main class="container">
+
+        <section class="search-section">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search characters..."
+            />
+
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <button id="searchBtn">
+                Search
+            </button>
+        </section>
+
+    <section id="message">
+<div id="loading" class="spinner hidden"></div>
+</section>
+
+        <section
+            id="results"
+            class="cards-container"
+        >
+        </section>
+
+        <section class="pagination">
+
+            <button id="prevBtn">
+                Previous
+            </button>
+
+            <span id="pageNumber">
+                Page 1
+            </span>
+
+            <button id="nextBtn">
+                Next
+            </button>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

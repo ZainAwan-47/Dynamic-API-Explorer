@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#loading{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:20px;
+    color:#2563eb;
+    font-weight:bold;
+}
+body {
+    background: #bdc3c7;
+}
+
+header {
+    background: linear-gradient(45deg,#000000,#3d3938);
+    color: white;
+    padding: 30px;
+    position: sticky;
+    z-index: 1000;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.search-section input,
+.search-section select {
+    padding: 12px;
+    flex: 1;
+}
+
+.search-section button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background: rgb(181, 70, 30);
+    color: white;
+    border: none;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    gap: 20px;
+}
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 10px 18px;
+    cursor: pointer;
+}
+.character-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.25);
+}
+
+.character-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+.error-box{
+    width:100%;
+    text-align:center;
+    padding:40px;
+    background:#ffe5e5;
+    border:2px solid #ff4d4d;
+    border-radius:12px;
+    color:#b30000;
+    font-size:22px;
+}
+.spinner{
+    width:50px;
+    height:50px;
+    margin:20px auto;
+    border:5px solid #ddd;
+    border-top:5px solid #c44b16;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+@media (max-width: 992px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section input,
+    .search-section select,
+    .search-section button {
+        width: 100%;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .character-card img {
+        height: 220px;
+    }
+
+    .card-content h2 {
+        font-size: 22px;
+    }
+
+    .card-content p {
+        font-size: 16px;
+    }
+
+    .pagination {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    header {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .character-card {
+        border-radius: 14px;
+    }
+
+    .character-card img {
+        height: 260px;
+    }
+
+    .card-content {
+        padding: 14px;
+    }
+
+    .card-content h2 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 15px;
+    }
+
+    .search-section input,
+    .search-section select,
+    .search-section button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pagination button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        display: none;
+    }
+
+    .character-card img {
+        height: 220px;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+}
