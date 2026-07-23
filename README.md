@@ -158,8 +158,7 @@ Will be added after deployment.
 
 ## GitHub Repository
 
-Will be added after uploading the project.
-
+https://github.com/ZainAwan-47/Dynamic-API-Explorer.git
 ---
 
 ## Author
