@@ -7,9 +7,12 @@ import { throttle } from "./utils/throttle.js";
 
 let currentPage = 1;
 let totalPages = 1;
+let isLoading = false;
 
 async function loadCharacters() {
+if (isLoading) return;
 
+isLoading = true;
     const searchValue = document
         .getElementById("searchInput")
         .value
@@ -44,7 +47,7 @@ async function loadCharacters() {
     } finally {
 
         loading.classList.add("hidden");
-
+isLoading = false;
     }
 
 }

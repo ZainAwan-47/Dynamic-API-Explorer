@@ -63,7 +63,7 @@ Dynamic-API-Explorer
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Dynamic-API-Explorer.git
+git clone https://github.com/ZainAwan-47/Dynamic-API-Explorer.git
 ```
 
 Move into the project folder:
@@ -152,7 +152,6 @@ Some features that could be added later include:
 
 ## Live Demo
 
-Will be added after deployment.
 
 ---
 
